@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School-programm</title>
     <link rel="stylesheet" href="styleAtt.css">
-    
+ 
 </head>
 <body>
      <header>
       <nav>
-      
+
         <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
           <span class="burger-line"></span>
           <span class="burger-line"></span>
@@ -23,7 +23,8 @@
             <li><a href="#future">Подготовка к выходу на роботу</a></li>
         </ul>
       </nav>
-
+ 
+      <div class="overlay" aria-hidden="true"></div>
     </header>
 
     <main>
@@ -102,7 +103,7 @@
         const burger = document.querySelector('.burger');
         const overlay = document.querySelector('.overlay');
         const body = document.body;
-        const navLinks = document.querySelector('.nav-links'); // Основной список ссылок
+        const navLinks = document.querySelector('.nav-links'); 
 
         if (!burger || !overlay || !navLinks) {
             console.error("Не найдены необходимые элементы: burger, overlay, или nav-links.");
@@ -111,18 +112,18 @@
 
         function openMenu() {
           body.classList.add('nav-open');
-          navLinks.classList.add('offcanvas-menu'); // Добавляем класс для выезда
+          navLinks.classList.add('offcanvas-menu'); 
           burger.setAttribute('aria-expanded', 'true');
           overlay.setAttribute('aria-hidden', 'false');
-          // body.style.overflow = 'hidden'; // Опционально: блокировать прокрутку
+         
         }
 
         function closeMenu() {
           body.classList.remove('nav-open');
-          navLinks.classList.remove('offcanvas-menu'); // Убираем класс для скрытия
+          navLinks.classList.remove('offcanvas-menu'); 
           burger.setAttribute('aria-expanded', 'false');
 overlay.setAttribute('aria-hidden', 'true');
-          // body.style.overflow = '';
+       
         }
 
         burger.addEventListener('click', function(e) {
@@ -132,7 +133,7 @@ overlay.setAttribute('aria-hidden', 'true');
 
         overlay.addEventListener('click', closeMenu);
 
-        // Клик по ссылке — закрыть (на мобильных / когда меню открыто)
+      
         const navLinksItems = navLinks.querySelectorAll('a');
         navLinksItems.forEach(link => {
           link.addEventListener('click', () => {
@@ -142,14 +143,14 @@ overlay.setAttribute('aria-hidden', 'true');
           });
         });
 
-        // Esc — закрыть
+   
         document.addEventListener('keydown', (e) => {
           if (e.key === 'Escape' && body.classList.contains('nav-open')) {
             closeMenu();
           }
         });
 
-        // При изменении размера окна, если оно стало больше 768px, закрыть меню
+      
         window.addEventListener('resize', () => {
           if (window.innerWidth > 768 && body.classList.contains('nav-open')) {
             closeMenu();
