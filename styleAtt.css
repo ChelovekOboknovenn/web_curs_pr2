@@ -1,7 +1,9 @@
+
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif; /* Используем Roboto, как рекомендовал ранее */
     line-height: 1.6;
     color: #333;
     background-color: #f8f8f8;
@@ -11,7 +13,6 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
 
 
 header {
@@ -28,7 +29,7 @@ header {
 
 nav {
     display: flex; 
-    justify-content: flex-start; 
+        justify-content: flex-start;
     align-items: center;
     height: 100%;
     max-width: 1200px;
@@ -38,7 +39,7 @@ nav {
 
 
 .burger {
-    display: flex;
+    display: flex; 
     background: transparent;
     border: none;
     padding: 10px;
@@ -63,11 +64,10 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; 
+    display: flex;
     gap: 30px; 
     flex-grow: 1; 
-    justify-content: flex-start; 
-}
+    justify-content: flex-start; }
 
 .nav-links li {
     display: inline-block;
@@ -92,8 +92,8 @@ nav {
     left: 0;
     width: 280px;
     height: 100vh;
-    padding-top: 80px; /* Отступ под header */
-    transform: translateX(-110%); /* Скрыто слева */
+    padding-top: 80px; 
+    transform: translateX(-110%); 
     background: linear-gradient(180deg,#007bff,#00d4ff);
     box-shadow: 4px 0 20px rgba(0,0,0,0.25);
     flex-direction: column;
@@ -111,6 +111,15 @@ body.nav-open .nav-links.offcanvas-menu {
 }
 
 
+.overlay {
+    display: none; 
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1050;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
 body.nav-open .overlay {
     display: block;
     opacity: 1;
@@ -140,7 +149,7 @@ main {
 
 h1 {
     text-align: center;
-    color: white;
+    color: WHITE;
     font-size: 2.8em;
     margin-bottom: 50px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
@@ -192,10 +201,14 @@ li {
 }
 
 
-.schol .block1 { text-align: center; }
-.schol h3 { text-align: center; color: #007bff; margin-top: 30px; }
-.schol ul { text-align: left; display: inline-block; margin-left: auto; margin-right: auto; padding-left: 20px; }
 
+.schol .block1 {
+     text-align: center;
+     }
+.schol h3 {
+     text-align: center; color: #007bff; margin-top: 30px; }
+.schol ul {
+     text-align: left; display: inline-block; margin-left: auto; margin-right: auto; padding-left: 20px; }
 
 .teacher .philosoph {
     display: flex;
@@ -275,8 +288,6 @@ li {
     list-style-type: decimal;
 }
 .future ol { margin-bottom: 12px; } 
-
-
 footer {
     background-color: #2c3e50;
     color: #ecf0f1;
@@ -289,8 +300,6 @@ footer p { margin-bottom: 10px; color: #bdc3c7; }
 footer p:last-child { margin-bottom: 0; }
 
 
-
-
 @media (max-width: 992px) {
     nav {
         justify-content: flex-start; 
@@ -298,7 +307,7 @@ footer p:last-child { margin-bottom: 0; }
     }
     .nav-links {
         gap: 20px;
-        justify-content: flex-start;
+        justify-content: flex-start; 
     }
     h1 { font-size: 2.2em; }
     h2 { font-size: 1.8em; }
@@ -315,16 +324,15 @@ footer p:last-child { margin-bottom: 0; }
     header { height: auto; } 
     nav {
         flex-wrap: wrap; 
-        justify-content: flex-start;
+        justify-content: flex-start; 
         padding: 15px 10px; 
     }
     .burger { margin-right: 12px; } 
 
-  
+    
     .nav-links {
         display: none; 
     }
-    
     .nav-links.offcanvas-menu {
         display: flex; 
     }
