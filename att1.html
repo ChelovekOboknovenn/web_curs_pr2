@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School-programm</title>
+    <link rel="stylesheet" href="styleAtt.css">
+    
+</head>
+<body>
+     <header>
+      <nav>
+      
+        <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span> 
+        </button>
+         <ul id="main-nav" class="nav-links"> 
+            <li><a href="#schol">О школе</a></li>
+            <li><a href="#teacher">Наши учителя</a></li>
+            <li><a href="#programm">Программы</a></li>
+            <li><a href="#future">Подготовка к выходу на роботу</a></li>
+        </ul>
+      </nav>
+
+    </header>
+
+    <main>
+        <h1>Школа программирования - "Future"</h1>
+        <section id="schol" class="schol">
+            <h2>О школе</h2>
+            <div class="block1">
+                <p>Наша школа основана в 2005 году и имеет уже более 1,5 успешно выпустившихся учеников. Мы обучаем программированию с нуля и с любого возраста.</p>
+                <p>Наше обучение основано на передовых разработках и современных инструментах</p>
+                <h3>Почему выбирают нас?</h3>
+                <ul>
+                    <li>Обучем как взрослых так и самых маленьких</li>
+                    <li>Удобный график. Вы можете сами выбирать время вашего обучения</li>
+                    <li>Обучение проводиться с учетом современных методов работы. Поэтому вы будте готовы к работе сразу</li>
+                    <li>Помогаеи нашим ученикам трудоустроится</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="teacher" class="teacher">
+            <div class="philosoph">
+                <div class="text-philosoph">
+                    <h3>Наши учителя</h3>
+                    <p>Наши учителя - специалисты в своих направлениях имеющие опыт работы в крпуных проектах и Крупное портфолио</p>
+                    <p>Вы никогода не останетесь без внимания. Учителя всегда прийдут на помощь и объеснят вам все темы и ответят на возникшие вопросы :)</p>
+                </div>
+                <div class="img-philosoph">
+                    <img src="https://s3.yandexcloud.net/pedproject/01/wp-content/uploads/2024/02/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3-%D0%92%D1%81%D0%B5%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D1%85-%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D1%81%D0%BE%D0%B2-%D0%B4%D0%BB%D1%8F-%D1%83%D1%87%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9-%D0%BF%D0%B5%D0%B4%D0%B0%D0%B3%D0%BE%D0%B3%D0%BE%D0%B2-%D0%B8-%D0%BF%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9-1.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section id="programm" class="programm">
+            <div class="container">
+                <h2>Наши программы</h2>
+                <div class="cards-wrapper application-cards">
+                    <div class="app-card">
+                        <p class="app-title"><i class="fas fa-desktop"></i>Web - разработка</p>
+                        <p class="app-description">Станьте специалистов wev-разработки вместе с нами</p>
+                    </div>
+                    <div class="app-card">
+                        <p class="app-title"><i class="fas fa-microphone"></i>Python</p>
+                        <p class="app-description">Станьте разработчиком на популярном языке программирования</p>
+                    </div>
+                    <div class="app-card">
+                        <p class="app-title"><i class="fas fa-chart-line"></i>1C</p>
+                        <p class="app-description">Станьте восстребованым специалистом на предприятии</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="future" class="future">
+            <div class="resept">
+                <h2>Как проходит подготовка к карьере?</h2>
+                <div class="block">
+                    <img src="https://static.seekingalpha.com/cdn/s3/uploads/getty_images/182386300/image_182386300.jpg?io=getty-c-w1536" alt="">
+                    <ul>
+                        <ol>Обучение</ol>
+                        <ol>Выполнение итоговых заданий курса</ol>
+                        <ol>Создание собственного портфолиос помощью специалистов</ol>
+                        <ol>Совместный поиск работодалей и заказчиков</ol>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Школа Программировния. Все права защищены</p>
+        <p>Свяжитесь с нами: Info@it-school.ru</p>
+    </footer>
+
+    <script>
+      (function() {
+        const burger = document.querySelector('.burger');
+        const overlay = document.querySelector('.overlay');
+        const body = document.body;
+        const navLinks = document.querySelector('.nav-links'); // Основной список ссылок
+
+        if (!burger || !overlay || !navLinks) {
+            console.error("Не найдены необходимые элементы: burger, overlay, или nav-links.");
+            return; // Прекращаем выполнение, если что-то не найдено
+        }
+
+        function openMenu() {
+          body.classList.add('nav-open');
+          navLinks.classList.add('offcanvas-menu'); // Добавляем класс для выезда
+          burger.setAttribute('aria-expanded', 'true');
+          overlay.setAttribute('aria-hidden', 'false');
+          // body.style.overflow = 'hidden'; // Опционально: блокировать прокрутку
+        }
+
+        function closeMenu() {
+          body.classList.remove('nav-open');
+          navLinks.classList.remove('offcanvas-menu'); // Убираем класс для скрытия
+          burger.setAttribute('aria-expanded', 'false');
+overlay.setAttribute('aria-hidden', 'true');
+          // body.style.overflow = '';
+        }
+
+        burger.addEventListener('click', function(e) {
+          const expanded = burger.getAttribute('aria-expanded') === 'true';
+          if (expanded) closeMenu(); else openMenu();
+        });
+
+        overlay.addEventListener('click', closeMenu);
+
+        // Клик по ссылке — закрыть (на мобильных / когда меню открыто)
+        const navLinksItems = navLinks.querySelectorAll('a');
+        navLinksItems.forEach(link => {
+          link.addEventListener('click', () => {
+            if (body.classList.contains('nav-open')) {
+              closeMenu();
+            }
+          });
+        });
+
+        // Esc — закрыть
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && body.classList.contains('nav-open')) {
+            closeMenu();
+          }
+        });
+
+        // При изменении размера окна, если оно стало больше 768px, закрыть меню
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 768 && body.classList.contains('nav-open')) {
+            closeMenu();
+          }
+        });
+      })();
+    </script>
+</body>
+</html>
